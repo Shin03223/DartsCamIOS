@@ -1,0 +1,24 @@
+name: DartsCam
+options:
+  bundleIdPrefix: com.dartsmaster
+targets:
+  DartsCam:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - Sources
+    info:
+      path: Info.plist
+      properties:
+        NSCameraUsageDescription: "ダーツボードの着弾位置を認識するためにカメラを使用します"
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.dartsmaster.dartscam
+        CODE_SIGNING_ALLOWED: "NO"
+        CODE_SIGNING_REQUIRED: "NO"
